@@ -1,0 +1,2 @@
+"{\"WFLYCTL0080: Failed services\" => {\"jboss.persistenceunit.\\\"Pesca.war#Pesca\\\"\" => \"org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: br.com.pesca.entidade.ArtePesca.fk_artePesca in br.com.pesca.entidade.Embarcacao.list_ArtePescas
+    Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: br.com.pesca.entidade.ArtePesca.fk_artePesca in br.com.pesca.entidade.Embarcacao.list_ArtePescas\"}}"

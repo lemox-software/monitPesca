@@ -1,0 +1,64 @@
+são 6 formulários no total:
+
+f1-cadastro de embarcações
+para realizar no início o senso de barcos; população de barcos.
+objeto é o barco/embarcação;
+O PROPRIETÁRIO PODE NÃO QUERER INFORMAR OS DADOS. NO MÍNIMO O NOME DO BARCO E A COMUNIDADE. ID POR FOTOGRAFIA (PLUS).
+LISTA DE EQUIPAMENTOS E ARTEFATOS.
+
+POTENCIA MOTOR: CILINDROS /TURBO/ETC: CAMPO INTEIRO.
+CRIAR CAMPO PARA OBSERVAÇÕES DO MOTOR
+
+CAPACIDADE DE CARGA KG
+COMPRIMENTO METROS
+
+CRIAR CADASTRO DE BARCOS - HISTÓRICO E INATIVO/ATIVO
+
+f2-esforço total
+formulário para preenchimento do acumulado de todos os desembarques no dia;
+apenas os desembarques; não identifica-se a embarcação; total de desembarques do dia; por arte de pesca; cadastro para cada tipo  de arte de pesca. Cadastrar a comuniade localidade da pesca. unidade fundamental seria o dia.
+OBRIGATÓRIO:
+LOCALIDADE MES/ANO DATA (TOTAL DEVE SER AUTOSOMA E VERIFICADO ALERTANDO O MONITOR). PERMITIR NULOS.
+
+f3-dias ativos
+preenche 0-se o barco não pescou naquele dia e 1-se o barco está ativo.
+entradas serão por nom de embarcação e por dia / por porto localidade;
+OBRIGATRÓRIO: LOCALIDADE / MES E ANO / NOME DO BARCO
+
+f4-desembarque
+entrevista com o mestre ou dono do barco
+qtd de formulários é o número de amostasa que foram verificadas / desembarque.
+CAPTURA TOTAL DA VIAGEM: SOMA DAS CAPTURAS DE CADA RECURSO. DEVE COINCIDIR COM A CAPTURA TOTAL. ELE PODE SER MAIOR QUE A CAPTURA DAS ESPÉCIES. SOMATÓRIO DOS RECURSOS INDIVIDUAIS DEVE SER NO MAXIMO IGUAL A CAPTURA TOTAL.
+CAMPO VALOR DEVE PERMITIR N/A E TAMBÉM ZERO.
+
+TAMANHO DA MALHA mm
+SUPER OU FUNDO
+DERIVA OU FIXA
+CERCO SIM OU NÃO
+TIPO DE ISCA
+EMALHE ESPINHEL PREPARAR CHAVE ESTRANGEIRA
+CERCO INTEIRO
+PUÇA INTEIRO
+MERGULHO INTEIRO
+
+CÓDIGO: ALFA
+TEMPO ARTE NO MAR: (FLOAT EM HORAS)
+DURAÇÃO VIAGEM: FLOAT HORAS
+
+f5-resumo das fichas
+monitor terminou o mes ele reune todos os forms do mes anterior e preenche o form de resumo das atividades dele. Deve ser uma saída do banco.
+
+f6-relatório mensal dos monitores
+nuvem de desembarque por dia e mes; observar o mapa e ter a visão da dinâmica pesqueira.
+o quadro 2 ele preenche via f4;
+
+---
+
+Validação dos dados após a tabulação dos dados.
+(estilo sigre)
+
+solicitar campos obrigatórios Dapper.
+DATAS SAÍDA/CHEGADA CAPTURA TOTAL / F4-Form desembarque
+
+
+SOLICITAR PREENCHIMENTO PADRÃO DOS CAMPOS

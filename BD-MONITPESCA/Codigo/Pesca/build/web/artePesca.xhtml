@@ -1,0 +1,46 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:f="http://xmlns.jcp.org/jsf/core"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui"
+                template="/WEB-INF/templates/Layout.xhtml">
+
+
+    <ui:define name="content">
+        <h1 class="aw-page-title">Registro das artes de pesca utilizadas pelas embarcações monitoradas</h1>
+        <h:form id="frm">
+
+            <p:panel  >
+                <h:form id="frmCadastro">
+
+                    <p:messages id="msg" />
+
+                    <div class="ui-fluid">
+
+                        <p:panelGrid columns="2" layout="grid"
+                                     columnClasses="ui-grid-col-4, ui-grid-col-8"
+                                     styleClass="panelgrid-noborder">
+
+                            <p:outputLabel value="Nome da arte de pesca" for="nome"/>
+                            <p:inputText id="nome" value="#{artePescaBean.bean.arteDePesca}"
+                                         required="true" requiredMessage="campo nome da arte de pesca obrigatorio"/> 
+
+                        </p:panelGrid>
+
+                    </div>
+
+                    <p:toolbar>
+                        <p:toolbarGroup>
+                            <p:commandButton value="Salvar" action="#{artePescaBean.salvar}" 
+                                             update="msg"/>
+
+                        </p:toolbarGroup>
+                    </p:toolbar>
+
+                </h:form>
+            </p:panel>
+        </h:form>
+    </ui:define>
+
+
+</ui:composition>

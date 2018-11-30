@@ -1,0 +1,10 @@
+persistir: 
+
+dadosEsforço
+areaPesca
+viagem
+recursoPorViagem
+custoPescaria
+conservacaoXviagem
+desembarque
+arteDePescaXdesembarque

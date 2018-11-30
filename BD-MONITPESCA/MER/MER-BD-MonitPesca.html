@@ -1,0 +1,2078 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-15">
+<style>
+      .table {
+        background-color:#F5F5FF;
+        border-left:4px solid gray;
+        border-bottom:4px solid gray;
+        border-top:4px solid gray;
+        border-right:4px solid gray;
+        margin-bottom:3em;
+        margin-left:2em;
+        margin-right:2em;
+        padding:1em;
+      }
+      .tableNameHeading h1 {
+          display: inline;
+        font-family: Segoe UI, Arial, sans-serif;
+        font-size:125%;
+        font-weight:bold;
+      }
+        
+      .tableNameHeading h2 {
+        display: inline;
+        font-family: Segoe UI, Arial, sans-serif;
+        font-size:115%;
+        font-weight:normal;
+      }
+      
+      .tableComment { 
+        background-color:#e4efff; margin-bottom:20px;
+      }
+      
+      .tableDefinition { 
+        padding:2px;
+        border-collapse:collapse;
+        margin-top:1em;
+      }
+
+      .tdTableDefinition {
+        padding-right:10px;
+        vertical-align:top;
+        border-top:1px solid #C0C0C0;
+      }
+
+      .tdLogicalColName {
+        width:20em;
+      }
+      
+      .tdPhysicalColName {
+        width:20em;
+      }
+      
+      .tdDataType {
+        width:10em;
+      }
+
+      .tdPkFlag {
+        width:4em;
+      }
+
+      .tdNullFlag {
+        width:9em;
+      }
+
+      .tdTableHeading {
+        padding:2px;
+        font-family: Segoe UI, Arial, sans-serif;
+        font-weight: bold;
+        vertical-align:top;
+        border-bottom: 1px solid #C0C0C0;
+        background-color: rgb(240,240,240);
+      }
+      
+      .subTitle {
+        font-family: Segoe UI, Arial, sans-serif;
+        font-weight: bold;
+      }
+
+      .references {
+      }
+      .comment {
+        color:#666666;
+        margin-left:3em;
+        padding:0.25em;
+      }
+    </style>
+<title>MER-BD-MonitPesca</title>
+</head>
+<body>
+<center>
+<h2>MER-BD-MonitPesca</h2>
+</center>
+<h3>List of tables</h3>
+<ul>
+<li>
+<a href="#areaPesca">areaPesca</a>
+</li>
+<li>
+<a href="#arteDePescaXembarcacao">arteDePescaXembarcacao</a>
+</li>
+<li>
+<a href="#artefatosPesca">artefatosPesca</a>
+</li>
+<li>
+<a href="#artePesca">artePesca</a>
+</li>
+<li>
+<a href="#atributoArtePesca">atributoArtePesca</a>
+</li>
+<li>
+<a href="#captura">captura</a>
+</li>
+<li>
+<a href="#comunidade">comunidade</a>
+</li>
+<li>
+<a href="#conservacaoPescado">conservacaoPescado</a>
+</li>
+<li>
+<a href="#custosPescaria">custosPescaria</a>
+</li>
+<li>
+<a href="#dadosEsforco">dadosEsforco</a>
+</li>
+<li>
+<a href="#daoAudit">daoAudit</a>
+</li>
+<li>
+<a href="#desembarque">desembarque</a>
+</li>
+<li>
+<a href="#diasAtivos">diasAtivos</a>
+</li>
+<li>
+<a href="#embarcacao">embarcacao</a>
+</li>
+<li>
+<a href="#entidadeAuditavel">entidadeAuditavel</a>
+</li>
+<li>
+<a href="#equiposEmbarcacao">equiposEmbarcacao</a>
+</li>
+<li>
+<a href="#historicoMudancaEmbarcacao">historicoMudancaEmbarcacao</a>
+</li>
+<li>
+<a href="#historicoStatusEmbarcacao">historicoStatusEmbarcacao</a>
+</li>
+<li>
+<a href="#loginAudit">loginAudit</a>
+</li>
+<li>
+<a href="#monitorCampo">monitorCampo</a>
+</li>
+<li>
+<a href="#monitorXcomunidade">monitorXcomunidade</a>
+</li>
+<li>
+<a href="#permUsuario">permUsuario</a>
+</li>
+<li>
+<a href="#porto">porto</a>
+</li>
+<li>
+<a href="#recursoPesqueiro">recursoPesqueiro</a>
+</li>
+<li>
+<a href="#statusRegistro">statusRegistro</a>
+</li>
+<li>
+<a href="#usuario">usuario</a>
+</li>
+<li>
+<a href="#viagem">viagem</a>
+</li>
+</ul>
+<div class="tableNameHeading">
+<h1>areaPesca<a name="areaPesca"></a>
+</h1>
+<h2>
+      (Physical Name: areaPesca)
+      </h2>
+<p class="comment">Registro das diversas &aacute;rteas de pesca onde a embarca&ccedil;&atilde;o atuou.</p>
+</div>
+<div class="table">
+<table class="tableDefinition" width="100%">
+<tr>
+<td class="tdTableHeading tdLogicalColName">Logical Column Name</td><td class="tdTableHeading tdPhysicalColName">Physical Column Name</td><td class="tdTableHeading tdDataType">Type</td><td class="tdTableHeading tdPkFlag">PK</td><td class="tdTableHeading tdNullFlag">Nullable</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">id (PK)</td><td class="tdTableDefinition">id</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap>PK</td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Chave prim&aacute;ria.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">nomePesqueiro</td><td class="tdTableDefinition">nomePesqueiro</td><td class="tdTableDefinition">VARCHAR(45)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Nome do pesqueiro.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">codigoQuadrante</td><td class="tdTableDefinition">codigoQuadrante</td><td class="tdTableDefinition">VARCHAR(8)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Identific&ccedil;&atilde;o do quadrante estat&iacute;stico.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">profundidade</td><td class="tdTableDefinition">profundidade</td><td class="tdTableDefinition">FLOAT</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Profundidade do pesqueiro.</div>
+</td>
+</tr>
+</table>
+<div class="references">
+<p class="subTitle">Referenced By</p>
+<ul>
+<li>
+<a href="#viagem">viagem</a> referencing (id)</li>
+</ul>
+</div>
+</div>
+<div class="tableNameHeading">
+<h1>arteDePescaXembarcacao<a name="arteDePescaXembarcacao"></a>
+</h1>
+<h2>
+      (Physical Name: arteDePescaXembarcacao)
+      </h2>
+<p class="comment">Registro das diversas artes de pesca utilizada por uma embarc&ccedil;&atilde;o.</p>
+</div>
+<div class="table">
+<table class="tableDefinition" width="100%">
+<tr>
+<td class="tdTableHeading tdLogicalColName">Logical Column Name</td><td class="tdTableHeading tdPhysicalColName">Physical Column Name</td><td class="tdTableHeading tdDataType">Type</td><td class="tdTableHeading tdPkFlag">PK</td><td class="tdTableHeading tdNullFlag">Nullable</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">id (PK)</td><td class="tdTableDefinition">id</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap>PK</td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Chave prim&aacute;ria.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">fk_desembarque_id
+                &nbsp;(<a href="#desembarque">FK</a>)
+              </td><td class="tdTableDefinition">fk_desembarque_id</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Chave estrangeira para a tabela de desembarque.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">fk_artePesca_id
+                &nbsp;(<a href="#artePesca">FK</a>)
+              </td><td class="tdTableDefinition">fk_artePesca_id</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Chave estrangeira para a tabela de artes de pesca.</div>
+</td>
+</tr>
+</table>
+<div class="references">
+<p class="subTitle">References</p>
+<ul>
+<li>
+<a href="#artePesca">artePesca</a> through (fk_artePesca_id)</li>
+<li>
+<a href="#desembarque">desembarque</a> through (fk_desembarque_id)</li>
+</ul>
+</div>
+</div>
+<div class="tableNameHeading">
+<h1>artefatosPesca<a name="artefatosPesca"></a>
+</h1>
+<h2>
+      (Physical Name: artefatosPesca)
+      </h2>
+<p class="comment">Cadastro dos artefatos utilizados para pescaria, tais como rede de emalhe, espinhel, etc.</p>
+</div>
+<div class="table">
+<table class="tableDefinition" width="100%">
+<tr>
+<td class="tdTableHeading tdLogicalColName">Logical Column Name</td><td class="tdTableHeading tdPhysicalColName">Physical Column Name</td><td class="tdTableHeading tdDataType">Type</td><td class="tdTableHeading tdPkFlag">PK</td><td class="tdTableHeading tdNullFlag">Nullable</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">id (PK)</td><td class="tdTableDefinition">id</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap>PK</td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Chave prim&aacute;ria</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">nomeArtefato</td><td class="tdTableDefinition">nomeArtefato</td><td class="tdTableDefinition">VARCHAR(45)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Nome do artefato de pesca.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">descricaoArtefato</td><td class="tdTableDefinition">descricaoArtefato</td><td class="tdTableDefinition">VARCHAR(255)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Descri&ccedil;&atilde;o opcional do artefato.</div>
+</td>
+</tr>
+</table>
+<div class="references">
+<p class="subTitle">Referenced By</p>
+<ul>
+<li>
+<a href="#embarcacao">embarcacao</a> referencing (id)</li>
+</ul>
+</div>
+</div>
+<div class="tableNameHeading">
+<h1>artePesca<a name="artePesca"></a>
+</h1>
+<h2>
+      (Physical Name: artePesca)
+      </h2>
+<p class="comment">Registro das artes de pesca utilizadas pelas embarca&ccedil;&otilde;es monitoradas.</p>
+</div>
+<div class="table">
+<table class="tableDefinition" width="100%">
+<tr>
+<td class="tdTableHeading tdLogicalColName">Logical Column Name</td><td class="tdTableHeading tdPhysicalColName">Physical Column Name</td><td class="tdTableHeading tdDataType">Type</td><td class="tdTableHeading tdPkFlag">PK</td><td class="tdTableHeading tdNullFlag">Nullable</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">id (PK)</td><td class="tdTableDefinition">id</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap>PK</td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Chave prim&aacute;ria.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">arteDePesca</td><td class="tdTableDefinition">arteDePesca</td><td class="tdTableDefinition">VARCHAR(0)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Nome da arte de pesca.</div>
+</td>
+</tr>
+</table>
+<div class="references">
+<p class="subTitle">Referenced By</p>
+<ul>
+<li>
+<a href="#arteDePescaXembarcacao">arteDePescaXembarcacao</a> referencing (id)</li>
+<li>
+<a href="#atributoArtePesca">atributoArtePesca</a> referencing (id)</li>
+<li>
+<a href="#captura">captura</a> referencing (id)</li>
+</ul>
+</div>
+</div>
+<div class="tableNameHeading">
+<h1>atributoArtePesca<a name="atributoArtePesca"></a>
+</h1>
+<h2>
+      (Physical Name: atributoArtePesca)
+      </h2>
+<p class="comment">Atributos individuais por arte de pesca.</p>
+</div>
+<div class="table">
+<table class="tableDefinition" width="100%">
+<tr>
+<td class="tdTableHeading tdLogicalColName">Logical Column Name</td><td class="tdTableHeading tdPhysicalColName">Physical Column Name</td><td class="tdTableHeading tdDataType">Type</td><td class="tdTableHeading tdPkFlag">PK</td><td class="tdTableHeading tdNullFlag">Nullable</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">id (PK)</td><td class="tdTableDefinition">id</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap>PK</td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Chave prim&aacute;ria.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">atributoArtePesca
+                &nbsp;(<a href="#artePesca">FK</a>)
+              </td><td class="tdTableDefinition">atributoArtePesca</td><td class="tdTableDefinition">VARCHAR(0)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Atributo espec&iacute;fico da arte de pesca.</div>
+</td>
+</tr>
+</table>
+<div class="references">
+<p class="subTitle">References</p>
+<ul>
+<li>
+<a href="#artePesca">artePesca</a> through (atributoArtePesca)</li>
+</ul>
+</div>
+</div>
+<div class="tableNameHeading">
+<h1>captura<a name="captura"></a>
+</h1>
+<h2>
+      (Physical Name: captura)
+      </h2>
+<p class="comment">Registro das capturas por viagem.</p>
+</div>
+<div class="table">
+<table class="tableDefinition" width="100%">
+<tr>
+<td class="tdTableHeading tdLogicalColName">Logical Column Name</td><td class="tdTableHeading tdPhysicalColName">Physical Column Name</td><td class="tdTableHeading tdDataType">Type</td><td class="tdTableHeading tdPkFlag">PK</td><td class="tdTableHeading tdNullFlag">Nullable</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">id (PK)</td><td class="tdTableDefinition">id</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap>PK</td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Chave prim&aacute;ria.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">fk_viagem_id
+                &nbsp;(<a href="#viagem">FK</a>)
+              </td><td class="tdTableDefinition">fk_viagem_id</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Chave estrangeira para a tabela de viagens.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">fk_recursoPesqueiro_id
+                &nbsp;(<a href="#recursoPesqueiro">FK</a>)
+              </td><td class="tdTableDefinition">fk_recursoPesqueiro_id</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Chave estrangeira para a tabela de recursos pesqueiros.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">fk_artePesca_id
+                &nbsp;(<a href="#artePesca">FK</a>)
+              </td><td class="tdTableDefinition">fk_artePesca_id</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Chave estrangeira para a tabela de artes de pesca.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">pesoCaptura</td><td class="tdTableDefinition">pesoCaptura</td><td class="tdTableDefinition">FLOAT</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Peso do recurso capturado (em kg).</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">precoKgRecurso</td><td class="tdTableDefinition">precoKgRecurso</td><td class="tdTableDefinition">FLOAT</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Pre&ccedil;o por kg do recurso capturado.</div>
+</td>
+</tr>
+</table>
+<div class="references">
+<p class="subTitle">References</p>
+<ul>
+<li>
+<a href="#artePesca">artePesca</a> through (fk_artePesca_id)</li>
+<li>
+<a href="#recursoPesqueiro">recursoPesqueiro</a> through (fk_recursoPesqueiro_id)</li>
+<li>
+<a href="#viagem">viagem</a> through (fk_viagem_id)</li>
+</ul>
+</div>
+</div>
+<div class="tableNameHeading">
+<h1>comunidade<a name="comunidade"></a>
+</h1>
+<h2>
+      (Physical Name: comunidade)
+      </h2>
+<p class="comment">Cadastros das comunidades de atua&ccedil;&atilde;o do programa</p>
+</div>
+<div class="table">
+<table class="tableDefinition" width="100%">
+<tr>
+<td class="tdTableHeading tdLogicalColName">Logical Column Name</td><td class="tdTableHeading tdPhysicalColName">Physical Column Name</td><td class="tdTableHeading tdDataType">Type</td><td class="tdTableHeading tdPkFlag">PK</td><td class="tdTableHeading tdNullFlag">Nullable</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">id (PK)</td><td class="tdTableDefinition">id</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap>PK</td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Chave prim&aacute;ria</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">nomeComunidade</td><td class="tdTableDefinition">nomeComunidade</td><td class="tdTableDefinition">VARCHAR(60)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Nome da comunidade. N&atilde;o necessariamente nme de munic&iacute;pios, sendo desvinculado do cadastro do IBGE.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">municipio</td><td class="tdTableDefinition">municipio</td><td class="tdTableDefinition">VARCHAR(60)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Munic&iacute;pio ao qual pertence a comunidade. Seguir cadastro do IBGE.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">ufMunicipio</td><td class="tdTableDefinition">ufMunicipio</td><td class="tdTableDefinition">VARCHAR(2)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Unidade da Federa&ccedil;&atilde;o (estado) ao qual pertence o munic&iacute;pio onde a comunidade se estabeleceu.</div>
+</td>
+</tr>
+</table>
+<div class="references">
+<p class="subTitle">Referenced By</p>
+<ul>
+<li>
+<a href="#embarcacao">embarcacao</a> referencing (id)</li>
+<li>
+<a href="#porto">porto</a> referencing (id)</li>
+<li>
+<a href="#diasAtivos">diasAtivos</a> referencing (id)</li>
+<li>
+<a href="#monitorXcomunidade">monitorXcomunidade</a> referencing (id)</li>
+</ul>
+</div>
+</div>
+<div class="tableNameHeading">
+<h1>conservacaoPescado<a name="conservacaoPescado"></a>
+</h1>
+<h2>
+      (Physical Name: conservacaoPescado)
+      </h2>
+<p class="comment">Registro dos diversos tipos de conserva&ccedil;&atilde;o do pescado.</p>
+</div>
+<div class="table">
+<table class="tableDefinition" width="100%">
+<tr>
+<td class="tdTableHeading tdLogicalColName">Logical Column Name</td><td class="tdTableHeading tdPhysicalColName">Physical Column Name</td><td class="tdTableHeading tdDataType">Type</td><td class="tdTableHeading tdPkFlag">PK</td><td class="tdTableHeading tdNullFlag">Nullable</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">id (PK)</td><td class="tdTableDefinition">id</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap>PK</td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Chave prim&aacute;ria.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">tipoConservacao</td><td class="tdTableDefinition">tipoConservacao</td><td class="tdTableDefinition">VARCHAR(30)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Tipo de cnoserva&ccedil;&atilde;o do pescado. Ex gelo, sal, etc.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">descricaoTipoConservacao</td><td class="tdTableDefinition">descricaoTipoConservacao</td><td class="tdTableDefinition">VARCHAR(255)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Breve descri&ccedil;&atilde;o do tipo de conserva&ccedil;&atilde;o do pescado.</div>
+</td>
+</tr>
+</table>
+<div class="references">
+<p class="subTitle">Referenced By</p>
+<ul>
+<li>
+<a href="#viagem">viagem</a> referencing (id)</li>
+</ul>
+</div>
+</div>
+<div class="tableNameHeading">
+<h1>custosPescaria<a name="custosPescaria"></a>
+</h1>
+<h2>
+      (Physical Name: custosPescaria)
+      </h2>
+<p class="comment">Registro dos custos individuais da pescaria - viagem.</p>
+</div>
+<div class="table">
+<table class="tableDefinition" width="100%">
+<tr>
+<td class="tdTableHeading tdLogicalColName">Logical Column Name</td><td class="tdTableHeading tdPhysicalColName">Physical Column Name</td><td class="tdTableHeading tdDataType">Type</td><td class="tdTableHeading tdPkFlag">PK</td><td class="tdTableHeading tdNullFlag">Nullable</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">id (PK)</td><td class="tdTableDefinition">id</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap>PK</td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Chave prim&aacute;ria.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">fk_viagem_id
+                &nbsp;(<a href="#viagem">FK</a>)
+              </td><td class="tdTableDefinition">fk_viagem_id</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Chave estrangeira para a tabela de viagens.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">conservacao</td><td class="tdTableDefinition">conservacao</td><td class="tdTableDefinition">FLOAT</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Custo com conserva&ccedil;&atilde;o dos pescados.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">rancho</td><td class="tdTableDefinition">rancho</td><td class="tdTableDefinition">FLOAT</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Custo com alimenta&ccedil;&atilde;o (rancho) na viagem.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">isca</td><td class="tdTableDefinition">isca</td><td class="tdTableDefinition">FLOAT</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Custo com iscas na viagem.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">combustivel</td><td class="tdTableDefinition">combustivel</td><td class="tdTableDefinition">FLOAT</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Custo com combust&iacute;vel na viagem.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">puxada</td><td class="tdTableDefinition">puxada</td><td class="tdTableDefinition">FLOAT</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Custo com a puxada na viagem.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">outrosCustos</td><td class="tdTableDefinition">outrosCustos</td><td class="tdTableDefinition">FLOAT</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Outros custos acess&oacute;rios da viagem.</div>
+</td>
+</tr>
+</table>
+<div class="references">
+<p class="subTitle">References</p>
+<ul>
+<li>
+<a href="#viagem">viagem</a> through (fk_viagem_id)</li>
+</ul>
+</div>
+</div>
+<div class="tableNameHeading">
+<h1>dadosEsforco<a name="dadosEsforco"></a>
+</h1>
+<h2>
+      (Physical Name: dadosEsforco)
+      </h2>
+<p class="comment">Registro dos dados de esfor&ccedil;o de pesca por &aacute;rea de pesca.</p>
+</div>
+<div class="table">
+<table class="tableDefinition" width="100%">
+<tr>
+<td class="tdTableHeading tdLogicalColName">Logical Column Name</td><td class="tdTableHeading tdPhysicalColName">Physical Column Name</td><td class="tdTableHeading tdDataType">Type</td><td class="tdTableHeading tdPkFlag">PK</td><td class="tdTableHeading tdNullFlag">Nullable</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">id (PK)</td><td class="tdTableDefinition">id</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap>PK</td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Chave prim&aacute;ria.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">fk_areaPesca_id</td><td class="tdTableDefinition">fk_areaPesca_id</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Chave estrangeira para a tabela de arte de pesca.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">duracaoViagem</td><td class="tdTableDefinition">duracaoViagem</td><td class="tdTableDefinition">TIME</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Tempo de dura&ccedil;&atilde;o da viagem at&eacute; o pesqueiro.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">tempoArteNoMar</td><td class="tdTableDefinition">tempoArteNoMar</td><td class="tdTableDefinition">TIME</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Tempo que a arte de pesca ficou no mar.</div>
+</td>
+</tr>
+</table>
+<div class="references">
+<p class="subTitle">Referenced By</p>
+<ul>
+<li>
+<a href="#viagem">viagem</a> referencing (id)</li>
+</ul>
+</div>
+</div>
+<div class="tableNameHeading">
+<h1>daoAudit<a name="daoAudit"></a>
+</h1>
+<h2>
+      (Physical Name: daoAudit)
+      </h2>
+<p class="comment">Registra as a&ccedil;&otilde;es dos usu&aacute;rios nas tabelas principais do sistema, para auditoria.</p>
+</div>
+<div class="table">
+<table class="tableDefinition" width="100%">
+<tr>
+<td class="tdTableHeading tdLogicalColName">Logical Column Name</td><td class="tdTableHeading tdPhysicalColName">Physical Column Name</td><td class="tdTableHeading tdDataType">Type</td><td class="tdTableHeading tdPkFlag">PK</td><td class="tdTableHeading tdNullFlag">Nullable</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">id (PK)</td><td class="tdTableDefinition">id</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap>PK</td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Chave prim&aacute;ria.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">dataAcao</td><td class="tdTableDefinition">dataAcao</td><td class="tdTableDefinition">DATE</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Data da a&ccedil;&atilde;o no sistema.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">horaAcao</td><td class="tdTableDefinition">horaAcao</td><td class="tdTableDefinition">TIME</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Hora da a&ccedil;&atilde;o no sistema.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">acaoDao</td><td class="tdTableDefinition">acaoDao</td><td class="tdTableDefinition">VARCHAR(6)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Registra as poss&iacute;veis a&ccedil;&otilde;es DAO nos registros: insert, update ou delete.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">fk_usuario_id
+                &nbsp;(<a href="#usuario">FK</a>)
+              </td><td class="tdTableDefinition">fk_usuario_id</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Chave estrangeira para a tabela de usu&aacute;rios.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">entidadeDao</td><td class="tdTableDefinition">entidadeDao</td><td class="tdTableDefinition">VARCHAR(30)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Nome da tabela que sofreu a a&ccedil;&atilde;o DAO auditada.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">idRegistroDao</td><td class="tdTableDefinition">idRegistroDao</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Id do registro que sofreu a a&ccedil;&atilde;o DAO auditada.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">dumpRegistroDao</td><td class="tdTableDefinition">dumpRegistroDao</td><td class="tdTableDefinition">LONGVARCHAR</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Dump do registro que foi deletado ou alterado. Insert n&atilde;o precisa de dump.</div>
+</td>
+</tr>
+</table>
+<div class="references">
+<p class="subTitle">References</p>
+<ul>
+<li>
+<a href="#usuario">usuario</a> through (fk_usuario_id)</li>
+</ul>
+</div>
+</div>
+<div class="tableNameHeading">
+<h1>desembarque<a name="desembarque"></a>
+</h1>
+<h2>
+      (Physical Name: desembarque)
+      </h2>
+<p class="comment">Registro dos desembarques da frota monitorada.</p>
+</div>
+<div class="table">
+<table class="tableDefinition" width="100%">
+<tr>
+<td class="tdTableHeading tdLogicalColName">Logical Column Name</td><td class="tdTableHeading tdPhysicalColName">Physical Column Name</td><td class="tdTableHeading tdDataType">Type</td><td class="tdTableHeading tdPkFlag">PK</td><td class="tdTableHeading tdNullFlag">Nullable</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">id (PK)</td><td class="tdTableDefinition">id</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap>PK</td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Chave prim&aacute;ria.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">fk_monitorCampo_id
+                &nbsp;(<a href="#monitorCampo">FK</a>)
+              </td><td class="tdTableDefinition">fk_monitorCampo_id</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Chave estrangeira para a tabela de monitores de campo.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">dataDesembarque</td><td class="tdTableDefinition">dataDesembarque</td><td class="tdTableDefinition">DATE</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Data do desembarque amostrado.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">horaDesembarque</td><td class="tdTableDefinition">horaDesembarque</td><td class="tdTableDefinition">TIME</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Hora do<br>desembarque amostrado.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">nomeEntrevistado</td><td class="tdTableDefinition">nomeEntrevistado</td><td class="tdTableDefinition">VARCHAR(45)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Nome do pescador, ou respons&aacute;vel pela embarca&ccedil;&atilde;o, entrevistado no ato do desembarque.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">fk_porto_id
+                &nbsp;(<a href="#porto">FK</a>)
+              </td><td class="tdTableDefinition">fk_porto_id</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Chave estrangeira para a tabela de portos.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">fk_viagem_id
+                &nbsp;(<a href="#viagem">FK</a>)
+              </td><td class="tdTableDefinition">fk_viagem_id</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Chave estrangeira para a tabela de viagens.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">fk_statusRegistro_id
+                &nbsp;(<a href="#statusRegistro">FK</a>)
+              </td><td class="tdTableDefinition">fk_statusRegistro_id</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Chave estrangeira par a tabela de status dos registros.</div>
+</td>
+</tr>
+</table>
+<div class="references">
+<p class="subTitle">References</p>
+<ul>
+<li>
+<a href="#porto">porto</a> through (fk_porto_id)</li>
+<li>
+<a href="#monitorCampo">monitorCampo</a> through (fk_monitorCampo_id)</li>
+<li>
+<a href="#statusRegistro">statusRegistro</a> through (fk_statusRegistro_id)</li>
+<li>
+<a href="#viagem">viagem</a> through (fk_viagem_id)</li>
+</ul>
+<p class="subTitle">Referenced By</p>
+<ul>
+<li>
+<a href="#arteDePescaXembarcacao">arteDePescaXembarcacao</a> referencing (id)</li>
+</ul>
+</div>
+</div>
+<div class="tableNameHeading">
+<h1>diasAtivos<a name="diasAtivos"></a>
+</h1>
+<h2>
+      (Physical Name: diasAtivos)
+      </h2>
+<p class="comment">Registro dos dias ativos de cada embarca&ccedil;&atilde;o em um per&iacute;odo de 1 m&ecirc;s</p>
+</div>
+<div class="table">
+<table class="tableDefinition" width="100%">
+<tr>
+<td class="tdTableHeading tdLogicalColName">Logical Column Name</td><td class="tdTableHeading tdPhysicalColName">Physical Column Name</td><td class="tdTableHeading tdDataType">Type</td><td class="tdTableHeading tdPkFlag">PK</td><td class="tdTableHeading tdNullFlag">Nullable</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">id (PK)</td><td class="tdTableDefinition">id</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap>PK</td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Chave prim&aacute;ria</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">fk_embarcacao_id
+                &nbsp;(<a href="#embarcacao">FK</a>)
+              </td><td class="tdTableDefinition">fk_embarcacao_id</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Chave estrangeira tabela de embarca&ccedil;&atilde;o.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">localidade</td><td class="tdTableDefinition">localidade</td><td class="tdTableDefinition">VARCHAR(30)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Localidade</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">fk_comunidade_id
+                &nbsp;(<a href="#comunidade">FK</a>)
+              </td><td class="tdTableDefinition">fk_comunidade_id</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Chave estrangeira tabela de comunidades.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">dataAtividade</td><td class="tdTableDefinition">dataAtividade</td><td class="tdTableDefinition">DATE</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Data em que o evento ocorreu.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">statusAtividade</td><td class="tdTableDefinition">statusAtividade</td><td class="tdTableDefinition">VARCHAR(1)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Esse valor dever&aacute; ser preenchido com 0(zero) se a embarca&ccedil;&atilde;o n&atilde;o estiver pescando ou 1 se ela estiver.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">observacoes</td><td class="tdTableDefinition">observacoes</td><td class="tdTableDefinition">VARCHAR(255)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Campo livre preenchimento com dados observacionais.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">fk_statusRegistro_id
+                &nbsp;(<a href="#statusRegistro">FK</a>)
+              </td><td class="tdTableDefinition">fk_statusRegistro_id</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Chave estrangeira para tabela de status dos registros.</div>
+</td>
+</tr>
+</table>
+<div class="references">
+<p class="subTitle">References</p>
+<ul>
+<li>
+<a href="#embarcacao">embarcacao</a> through (fk_embarcacao_id)</li>
+<li>
+<a href="#comunidade">comunidade</a> through (fk_comunidade_id)</li>
+<li>
+<a href="#statusRegistro">statusRegistro</a> through (fk_statusRegistro_id)</li>
+</ul>
+</div>
+</div>
+<div class="tableNameHeading">
+<h1>embarcacao<a name="embarcacao"></a>
+</h1>
+<h2>
+      (Physical Name: embarcacao)
+      </h2>
+<p class="comment">Cadastro das embarca&ccedil;&otilde;es</p>
+</div>
+<div class="table">
+<table class="tableDefinition" width="100%">
+<tr>
+<td class="tdTableHeading tdLogicalColName">Logical Column Name</td><td class="tdTableHeading tdPhysicalColName">Physical Column Name</td><td class="tdTableHeading tdDataType">Type</td><td class="tdTableHeading tdPkFlag">PK</td><td class="tdTableHeading tdNullFlag">Nullable</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">id (PK)</td><td class="tdTableDefinition">id</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap>PK</td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Chave prim&aacute;ria</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">fk_comunidade_id
+                &nbsp;(<a href="#comunidade">FK</a>)
+              </td><td class="tdTableDefinition">fk_comunidade_id</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Chave estrangeira da tabea de comunidades</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">dataRegistro</td><td class="tdTableDefinition">dataRegistro</td><td class="tdTableDefinition">DATE</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Data de registro da embarca&ccedil;&atilde;o no sistema.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">nomeEmbarcacao</td><td class="tdTableDefinition">nomeEmbarcacao</td><td class="tdTableDefinition">VARCHAR(30)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Nome do barco</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">nomeProprietario</td><td class="tdTableDefinition">nomeProprietario</td><td class="tdTableDefinition">VARCHAR(60)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Nome do propriet&aacute;rio do barco</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">fk_portoPrincipal_id
+                &nbsp;(<a href="#porto">FK</a>)
+              </td><td class="tdTableDefinition">fk_portoPrincipal_id</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Chave estrangeira para a tabela de portos</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">numTripulantes</td><td class="tdTableDefinition">numTripulantes</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">N&uacute;mero de tripulantes da embarca&ccedil;&atilde;o.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">potenciaMotor</td><td class="tdTableDefinition">potenciaMotor</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Pot&ecirc;ncia do motor da embarca&ccedil;&atilde;o em HP.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">comprimentoCasco</td><td class="tdTableDefinition">comprimentoCasco</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Comprimento do casco da embarca&ccedil;&atilde;o em metros.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">fk_equiposEmbarcacao_id
+                &nbsp;(<a href="#equiposEmbarcacao">FK</a>)
+              </td><td class="tdTableDefinition">fk_equiposEmbarcacao_id</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Chave estrangeira para a tabela de equipamentos da embarca&ccedil;&atilde;o equiposEmbarcacao.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">fk_artefatosPesca_id
+                &nbsp;(<a href="#artefatosPesca">FK</a>)
+              </td><td class="tdTableDefinition">fk_artefatosPesca_id</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Chave estrangeira tabela de artefatos de pesca artefatosPesca.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">duracaoDiasMar</td><td class="tdTableDefinition">duracaoDiasMar</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Tempo em dias que a embarca&ccedil;&atilde;o pode ficar no mar sem precisar de reabastecimento (de combust&iacute;vel ou outros insumos).</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">capacidadeCaga</td><td class="tdTableDefinition">capacidadeCaga</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Capacidade de carga da embarca&ccedil;&atilde;o em toneladas.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">statusEmbarcacao</td><td class="tdTableDefinition">statusEmbarcacao</td><td class="tdTableDefinition">VARCHAR(20)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Define se a embarca&ccedil;&atilde;o est&aacute; pescando ou fora de atividade. Os estados da embarca&ccedil;&atilde;o ser&atilde;o controlados pela camada de regra de neg&oacute;cios.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">fk_statusRegistro_id
+                &nbsp;(<a href="#statusRegistro">FK</a>)
+              </td><td class="tdTableDefinition">fk_statusRegistro_id</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Chave estrangeira para tabela de status dos registros.</div>
+</td>
+</tr>
+</table>
+<div class="references">
+<p class="subTitle">References</p>
+<ul>
+<li>
+<a href="#comunidade">comunidade</a> through (fk_comunidade_id)</li>
+<li>
+<a href="#porto">porto</a> through (fk_portoPrincipal_id)</li>
+<li>
+<a href="#equiposEmbarcacao">equiposEmbarcacao</a> through (fk_equiposEmbarcacao_id)</li>
+<li>
+<a href="#artefatosPesca">artefatosPesca</a> through (fk_artefatosPesca_id)</li>
+<li>
+<a href="#statusRegistro">statusRegistro</a> through (fk_statusRegistro_id)</li>
+</ul>
+<p class="subTitle">Referenced By</p>
+<ul>
+<li>
+<a href="#diasAtivos">diasAtivos</a> referencing (id)</li>
+<li>
+<a href="#historicoMudancaEmbarcacao">historicoMudancaEmbarcacao</a> referencing (id)</li>
+<li>
+<a href="#historicoStatusEmbarcacao">historicoStatusEmbarcacao</a> referencing (id)</li>
+</ul>
+</div>
+</div>
+<div class="tableNameHeading">
+<h1>entidadeAuditavel<a name="entidadeAuditavel"></a>
+</h1>
+<h2>
+      (Physical Name: entidadeAuditavel)
+      </h2>
+<p class="comment">Rela&ccedil;&atilde;o das entidades que sofrer&atilde;o o processo de auditoria DAO.</p>
+</div>
+<div class="table">
+<table class="tableDefinition" width="100%">
+<tr>
+<td class="tdTableHeading tdLogicalColName">Logical Column Name</td><td class="tdTableHeading tdPhysicalColName">Physical Column Name</td><td class="tdTableHeading tdDataType">Type</td><td class="tdTableHeading tdPkFlag">PK</td><td class="tdTableHeading tdNullFlag">Nullable</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">id (PK)</td><td class="tdTableDefinition">id</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap>PK</td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Chave prim&aacute;ria.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">nomeEntidade</td><td class="tdTableDefinition">nomeEntidade</td><td class="tdTableDefinition">VARCHAR(30)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Nome da entidade que sofrer&aacute; auditoria.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">fk_usuario_id
+                &nbsp;(<a href="#usuario">FK</a>)
+              </td><td class="tdTableDefinition">fk_usuario_id</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Chave estrangeira para a tabela de usu&aacute;rios, a fim de registrar o ID do usu&aacute;rio que solicitou auditoria na entidade.</div>
+</td>
+</tr>
+</table>
+<div class="references">
+<p class="subTitle">References</p>
+<ul>
+<li>
+<a href="#usuario">usuario</a> through (fk_usuario_id)</li>
+</ul>
+</div>
+</div>
+<div class="tableNameHeading">
+<h1>equiposEmbarcacao<a name="equiposEmbarcacao"></a>
+</h1>
+<h2>
+      (Physical Name: equiposEmbarcacao)
+      </h2>
+<p class="comment">Tipos de equipamentos utilizados nas embarca&ccedil;&otilde;es.</p>
+</div>
+<div class="table">
+<table class="tableDefinition" width="100%">
+<tr>
+<td class="tdTableHeading tdLogicalColName">Logical Column Name</td><td class="tdTableHeading tdPhysicalColName">Physical Column Name</td><td class="tdTableHeading tdDataType">Type</td><td class="tdTableHeading tdPkFlag">PK</td><td class="tdTableHeading tdNullFlag">Nullable</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">id (PK)</td><td class="tdTableDefinition">id</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap>PK</td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Chave prim&aacute;ria</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">nomeEquipo</td><td class="tdTableDefinition">nomeEquipo</td><td class="tdTableDefinition">VARCHAR(30)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Nome do equipamento.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">descricaoEquipo</td><td class="tdTableDefinition">descricaoEquipo</td><td class="tdTableDefinition">VARCHAR(60)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Descri&ccedil;&atilde;o do equipamento, se necess&aacute;rio.</div>
+</td>
+</tr>
+</table>
+<div class="references">
+<p class="subTitle">Referenced By</p>
+<ul>
+<li>
+<a href="#embarcacao">embarcacao</a> referencing (id)</li>
+</ul>
+</div>
+</div>
+<div class="tableNameHeading">
+<h1>historicoMudancaEmbarcacao<a name="historicoMudancaEmbarcacao"></a>
+</h1>
+<h2>
+      (Physical Name: historicoMudancaEmbarcacao)
+      </h2>
+<p class="comment">Registro do hist&oacute;rico de movimenta&ccedil;&atilde;o da embarca&ccedil;&atilde;o entre localidades ou portos de registro. Se a embarca&ccedil;&atilde;o mudar de porto principal ou localidade o registro ser&aacute; armazenado nessa entidade.</p>
+</div>
+<div class="table">
+<table class="tableDefinition" width="100%">
+<tr>
+<td class="tdTableHeading tdLogicalColName">Logical Column Name</td><td class="tdTableHeading tdPhysicalColName">Physical Column Name</td><td class="tdTableHeading tdDataType">Type</td><td class="tdTableHeading tdPkFlag">PK</td><td class="tdTableHeading tdNullFlag">Nullable</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">id (PK)</td><td class="tdTableDefinition">id</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap>PK</td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Chave prim&aacute;ria.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">fk_embarcacao_id
+                &nbsp;(<a href="#embarcacao">FK</a>)
+              </td><td class="tdTableDefinition">fk_embarcacao_id</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Chave estrangeira para a tabela de embarca&ccedil;&otilde;es.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">dataMudanca</td><td class="tdTableDefinition">dataMudanca</td><td class="tdTableDefinition">DATE</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Data da mudan&ccedil;a da embarca&ccedil;&atilde;o para outro porto ou comunidade.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">idPortoAnterior</td><td class="tdTableDefinition">idPortoAnterior</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Id do porto no qual a embarca&ccedil;&atilde;o estava registrada.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">idComunidadeAnterior</td><td class="tdTableDefinition">idComunidadeAnterior</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Id da comunidade anterior a qual pertencia a embarca&ccedil;&atilde;o.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">motivoMudanca</td><td class="tdTableDefinition">motivoMudanca</td><td class="tdTableDefinition">VARCHAR(255)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Descri&ccedil;&atilde;o breve do motivo da mudan&ccedil;a da embarca&ccedil;&atilde;o.</div>
+</td>
+</tr>
+</table>
+<div class="references">
+<p class="subTitle">References</p>
+<ul>
+<li>
+<a href="#embarcacao">embarcacao</a> through (fk_embarcacao_id)</li>
+</ul>
+</div>
+</div>
+<div class="tableNameHeading">
+<h1>historicoStatusEmbarcacao<a name="historicoStatusEmbarcacao"></a>
+</h1>
+<h2>
+      (Physical Name: historicoStatusEmbarcacao)
+      </h2>
+<p class="comment">Registro do hist&oacute;rico de embarca&ccedil;&otilde;es que foram desativadas, est&atilde;o em estaleiros, ou outra raz&atilde;o que as impe&ccedil;a de pescar.</p>
+</div>
+<div class="table">
+<table class="tableDefinition" width="100%">
+<tr>
+<td class="tdTableHeading tdLogicalColName">Logical Column Name</td><td class="tdTableHeading tdPhysicalColName">Physical Column Name</td><td class="tdTableHeading tdDataType">Type</td><td class="tdTableHeading tdPkFlag">PK</td><td class="tdTableHeading tdNullFlag">Nullable</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">id (PK)</td><td class="tdTableDefinition">id</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap>PK</td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Chave prim&aacute;ria.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">fk_embarcacao_id
+                &nbsp;(<a href="#embarcacao">FK</a>)
+              </td><td class="tdTableDefinition">fk_embarcacao_id</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Chave estrangeira para a tabela de embarca&ccedil;&otilde;es.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">dataAlteracaoStatus</td><td class="tdTableDefinition">dataAlteracaoStatus</td><td class="tdTableDefinition">DATE</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Data da altera&ccedil;&atilde;o do status da embarca&ccedil;&atilde;o, que pode ser inativa ou ativa.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">descricaoStatus</td><td class="tdTableDefinition">descricaoStatus</td><td class="tdTableDefinition">VARCHAR(30)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Descri&ccedil;&atilde;o do status da embarca&ccedil;&atilde;o.</div>
+</td>
+</tr>
+</table>
+<div class="references">
+<p class="subTitle">References</p>
+<ul>
+<li>
+<a href="#embarcacao">embarcacao</a> through (fk_embarcacao_id)</li>
+</ul>
+</div>
+</div>
+<div class="tableNameHeading">
+<h1>loginAudit<a name="loginAudit"></a>
+</h1>
+<h2>
+      (Physical Name: loginAudit)
+      </h2>
+<p class="comment">Armazena o hist&oacute;rico de login e logout no sistema.</p>
+</div>
+<div class="table">
+<table class="tableDefinition" width="100%">
+<tr>
+<td class="tdTableHeading tdLogicalColName">Logical Column Name</td><td class="tdTableHeading tdPhysicalColName">Physical Column Name</td><td class="tdTableHeading tdDataType">Type</td><td class="tdTableHeading tdPkFlag">PK</td><td class="tdTableHeading tdNullFlag">Nullable</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">id (PK)</td><td class="tdTableDefinition">id</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap>PK</td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Chave prim&aacute;ria.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">fk_usuario_id
+                &nbsp;(<a href="#usuario">FK</a>)
+              </td><td class="tdTableDefinition">fk_usuario_id</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Chave estrangeira para a tabela de usu&aacute;rios.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">dataLogin</td><td class="tdTableDefinition">dataLogin</td><td class="tdTableDefinition">DATE</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Data do login no sistema.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">dataLogout</td><td class="tdTableDefinition">dataLogout</td><td class="tdTableDefinition">DATE</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Data de logout do sistema.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">horaLogin</td><td class="tdTableDefinition">horaLogin</td><td class="tdTableDefinition">TIME</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Hora do login no sistema.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">horaLogout</td><td class="tdTableDefinition">horaLogout</td><td class="tdTableDefinition">TIME</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Hora do logout no sistema.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">enderecoIp</td><td class="tdTableDefinition">enderecoIp</td><td class="tdTableDefinition">VARCHAR(40)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Endere&ccedil;o IP de origem da conex&atilde;o.</div>
+</td>
+</tr>
+</table>
+<div class="references">
+<p class="subTitle">References</p>
+<ul>
+<li>
+<a href="#usuario">usuario</a> through (fk_usuario_id)</li>
+</ul>
+</div>
+</div>
+<div class="tableNameHeading">
+<h1>monitorCampo<a name="monitorCampo"></a>
+</h1>
+<h2>
+      (Physical Name: monitorCampo)
+      </h2>
+<p class="comment">Dados de cadastro dos monitores de campo que realizam as amostragens.</p>
+</div>
+<div class="table">
+<table class="tableDefinition" width="100%">
+<tr>
+<td class="tdTableHeading tdLogicalColName">Logical Column Name</td><td class="tdTableHeading tdPhysicalColName">Physical Column Name</td><td class="tdTableHeading tdDataType">Type</td><td class="tdTableHeading tdPkFlag">PK</td><td class="tdTableHeading tdNullFlag">Nullable</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">id (PK)</td><td class="tdTableDefinition">id</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap>PK</td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Chave prim&aacute;ria</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">nomeMonitor</td><td class="tdTableDefinition">nomeMonitor</td><td class="tdTableDefinition">VARCHAR(30)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Primeiro nome do monitor.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">sobrenomeMonitor</td><td class="tdTableDefinition">sobrenomeMonitor</td><td class="tdTableDefinition">VARCHAR(60)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Sobrenome completo do monitor.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">rgMonitor</td><td class="tdTableDefinition">rgMonitor</td><td class="tdTableDefinition">VARCHAR(9)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Identidade do monitor.</div>
+</td>
+</tr>
+</table>
+<div class="references">
+<p class="subTitle">Referenced By</p>
+<ul>
+<li>
+<a href="#monitorXcomunidade">monitorXcomunidade</a> referencing (id)</li>
+<li>
+<a href="#desembarque">desembarque</a> referencing (id)</li>
+</ul>
+</div>
+</div>
+<div class="tableNameHeading">
+<h1>monitorXcomunidade<a name="monitorXcomunidade"></a>
+</h1>
+<h2>
+      (Physical Name: monitorXcomunidade)
+      </h2>
+<p class="comment">Rela&ccedil;&atilde;o entre o monitor e as comunidades onde ele atua.</p>
+</div>
+<div class="table">
+<table class="tableDefinition" width="100%">
+<tr>
+<td class="tdTableHeading tdLogicalColName">Logical Column Name</td><td class="tdTableHeading tdPhysicalColName">Physical Column Name</td><td class="tdTableHeading tdDataType">Type</td><td class="tdTableHeading tdPkFlag">PK</td><td class="tdTableHeading tdNullFlag">Nullable</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">id (PK)</td><td class="tdTableDefinition">id</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap>PK</td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Chave prim&aacute;ria.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">fk_monitor_id
+                &nbsp;(<a href="#monitorCampo">FK</a>)
+              </td><td class="tdTableDefinition">fk_monitor_id</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Chave estrangeira para a atabela de monitores.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">fk_comunidade_id
+                &nbsp;(<a href="#comunidade">FK</a>)
+              </td><td class="tdTableDefinition">fk_comunidade_id</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Chave estrangeira para a tabela de comunidades.</div>
+</td>
+</tr>
+</table>
+<div class="references">
+<p class="subTitle">References</p>
+<ul>
+<li>
+<a href="#comunidade">comunidade</a> through (fk_comunidade_id)</li>
+<li>
+<a href="#monitorCampo">monitorCampo</a> through (fk_monitor_id)</li>
+</ul>
+</div>
+</div>
+<div class="tableNameHeading">
+<h1>permUsuario<a name="permUsuario"></a>
+</h1>
+<h2>
+      (Physical Name: permUsuario)
+      </h2>
+<p class="comment">Definbe as rela&ccedil;&otilde;es de n&iacute;veis de permissoes dos usuarios.</p>
+</div>
+<div class="table">
+<table class="tableDefinition" width="100%">
+<tr>
+<td class="tdTableHeading tdLogicalColName">Logical Column Name</td><td class="tdTableHeading tdPhysicalColName">Physical Column Name</td><td class="tdTableHeading tdDataType">Type</td><td class="tdTableHeading tdPkFlag">PK</td><td class="tdTableHeading tdNullFlag">Nullable</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">id (PK)</td><td class="tdTableDefinition">id</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap>PK</td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Chave prim&aacute;ria.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">fk_usuario_id
+                &nbsp;(<a href="#usuario">FK</a>)
+              </td><td class="tdTableDefinition">fk_usuario_id</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Chave estrangeira para a tabela de usuarios.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">isAdmin</td><td class="tdTableDefinition">isAdmin</td><td class="tdTableDefinition">VARCHAR(1)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Define se o usu&aacute;rio &eacute; administrador do sistema, com total acesso aos recursos. S=Sim N=N&atilde;o.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">isTabulador</td><td class="tdTableDefinition">isTabulador</td><td class="tdTableDefinition">VARCHAR(1)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Define se o usu&aacute;rio &eacute; tabulador de dados. S=Sim N=N&atilde;o.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">isCoordenador</td><td class="tdTableDefinition">isCoordenador</td><td class="tdTableDefinition">VARCHAR(1)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Define se o usu&aacute;rio &eacute; coordenador. S=Sim n=N&atilde;o.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">isAuditor</td><td class="tdTableDefinition">isAuditor</td><td class="tdTableDefinition">VARCHAR(1)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Define se o usu&aacute;rio &eacute; auditor. S=Sim N=N&atilde;o.</div>
+</td>
+</tr>
+</table>
+<div class="references">
+<p class="subTitle">References</p>
+<ul>
+<li>
+<a href="#usuario">usuario</a> through (fk_usuario_id)</li>
+</ul>
+</div>
+</div>
+<div class="tableNameHeading">
+<h1>porto<a name="porto"></a>
+</h1>
+<h2>
+      (Physical Name: porto)
+      </h2>
+<p class="comment">Cadastro dos portos onde o programa atua.</p>
+</div>
+<div class="table">
+<table class="tableDefinition" width="100%">
+<tr>
+<td class="tdTableHeading tdLogicalColName">Logical Column Name</td><td class="tdTableHeading tdPhysicalColName">Physical Column Name</td><td class="tdTableHeading tdDataType">Type</td><td class="tdTableHeading tdPkFlag">PK</td><td class="tdTableHeading tdNullFlag">Nullable</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">id (PK)</td><td class="tdTableDefinition">id</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap>PK</td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Chave prim&aacute;ria.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">nomePorto</td><td class="tdTableDefinition">nomePorto</td><td class="tdTableDefinition">VARCHAR(30)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Nome do porto</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">fk_comunidade_id
+                &nbsp;(<a href="#comunidade">FK</a>)
+              </td><td class="tdTableDefinition">fk_comunidade_id</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Chave estrangeira tabela de comunidades.</div>
+</td>
+</tr>
+</table>
+<div class="references">
+<p class="subTitle">References</p>
+<ul>
+<li>
+<a href="#comunidade">comunidade</a> through (fk_comunidade_id)</li>
+</ul>
+<p class="subTitle">Referenced By</p>
+<ul>
+<li>
+<a href="#embarcacao">embarcacao</a> referencing (id)</li>
+<li>
+<a href="#desembarque">desembarque</a> referencing (id)</li>
+</ul>
+</div>
+</div>
+<div class="tableNameHeading">
+<h1>recursoPesqueiro<a name="recursoPesqueiro"></a>
+</h1>
+<h2>
+      (Physical Name: recursoPesqueiro)
+      </h2>
+<p class="comment">Registros dos diversos recursos pesqueiros utilizados pelas embraca&ccedil;&otilde;es monitoradas.</p>
+</div>
+<div class="table">
+<table class="tableDefinition" width="100%">
+<tr>
+<td class="tdTableHeading tdLogicalColName">Logical Column Name</td><td class="tdTableHeading tdPhysicalColName">Physical Column Name</td><td class="tdTableHeading tdDataType">Type</td><td class="tdTableHeading tdPkFlag">PK</td><td class="tdTableHeading tdNullFlag">Nullable</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">id (PK)</td><td class="tdTableDefinition">id</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap>PK</td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Chave prim&aacute;ria.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">recursoPesqueiro</td><td class="tdTableDefinition">recursoPesqueiro</td><td class="tdTableDefinition">VARCHAR(20)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Nome do recurso pesqueiro. Ex camar&atilde;o, ca&ccedil;&atilde;o, olhete, etc.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">descricaoRecurso</td><td class="tdTableDefinition">descricaoRecurso</td><td class="tdTableDefinition">VARCHAR(255)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Breve descri&ccedil;&atilde;o do recurso pesqueiro.</div>
+</td>
+</tr>
+</table>
+<div class="references">
+<p class="subTitle">Referenced By</p>
+<ul>
+<li>
+<a href="#captura">captura</a> referencing (id)</li>
+</ul>
+</div>
+</div>
+<div class="tableNameHeading">
+<h1>statusRegistro<a name="statusRegistro"></a>
+</h1>
+<h2>
+      (Physical Name: statusRegistro)
+      </h2>
+<p class="comment">Status dos registros do sistema, compreendendo a l&oacute;gica da cama do neg&oacute;cio que determina diversos est&aacute;gio de vida do registro.</p>
+</div>
+<div class="table">
+<table class="tableDefinition" width="100%">
+<tr>
+<td class="tdTableHeading tdLogicalColName">Logical Column Name</td><td class="tdTableHeading tdPhysicalColName">Physical Column Name</td><td class="tdTableHeading tdDataType">Type</td><td class="tdTableHeading tdPkFlag">PK</td><td class="tdTableHeading tdNullFlag">Nullable</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">id (PK)</td><td class="tdTableDefinition">id</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap>PK</td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Chave prim&aacute;ria.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">statusRegistro</td><td class="tdTableDefinition">statusRegistro</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Defini&ccedil;&atilde;o do status do registro:<br>1 = pendente valida&ccedil;&atilde;o<br>2 = pendente auditoria<br>3 = pendente corre&ccedil;&atilde;o<br>4 = auditado</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">descricaoStatus</td><td class="tdTableDefinition">descricaoStatus</td><td class="tdTableDefinition">VARCHAR(20)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Descri&ccedil;&atilde;o dos status dos registros.</div>
+</td>
+</tr>
+</table>
+<div class="references">
+<p class="subTitle">Referenced By</p>
+<ul>
+<li>
+<a href="#embarcacao">embarcacao</a> referencing (id)</li>
+<li>
+<a href="#diasAtivos">diasAtivos</a> referencing (id)</li>
+<li>
+<a href="#desembarque">desembarque</a> referencing (id)</li>
+</ul>
+</div>
+</div>
+<div class="tableNameHeading">
+<h1>usuario<a name="usuario"></a>
+</h1>
+<h2>
+      (Physical Name: usuario)
+      </h2>
+<p class="comment">Usu&aacute;rios do sistema.</p>
+</div>
+<div class="table">
+<table class="tableDefinition" width="100%">
+<tr>
+<td class="tdTableHeading tdLogicalColName">Logical Column Name</td><td class="tdTableHeading tdPhysicalColName">Physical Column Name</td><td class="tdTableHeading tdDataType">Type</td><td class="tdTableHeading tdPkFlag">PK</td><td class="tdTableHeading tdNullFlag">Nullable</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">id (PK)</td><td class="tdTableDefinition">id</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap>PK</td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Chave prim&aacute;ria</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">emailUsuario</td><td class="tdTableDefinition">emailUsuario</td><td class="tdTableDefinition">VARCHAR(45)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Email utilizado para login do usu&aacute;rio.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">nomeUsuario</td><td class="tdTableDefinition">nomeUsuario</td><td class="tdTableDefinition">VARCHAR(30)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Primeiro nome do usu&aacute;rio.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">sobrenomeUsuario</td><td class="tdTableDefinition">sobrenomeUsuario</td><td class="tdTableDefinition">VARCHAR(45)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Sobrenome completo do usu&aacute;rio.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">senha</td><td class="tdTableDefinition">senha</td><td class="tdTableDefinition">VARCHAR(255)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Senha criptografada.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">dataCriacao</td><td class="tdTableDefinition">dataCriacao</td><td class="tdTableDefinition">DATE</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Data cria&ccedil;&atilde;o usu&aacute;rio.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">cargoUsuario</td><td class="tdTableDefinition">cargoUsuario</td><td class="tdTableDefinition">VARCHAR(0)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Cargo do usu&aacute;rio.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">matriculaUsuario</td><td class="tdTableDefinition">matriculaUsuario</td><td class="tdTableDefinition">VARCHAR(0)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Matr&iacute;cula do usu&aacute;rio.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">docIdentUsuario</td><td class="tdTableDefinition">docIdentUsuario</td><td class="tdTableDefinition">VARCHAR(16)</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Documento identifica&ccedil;&atilde;o do usu&aacute;rio.</div>
+</td>
+</tr>
+</table>
+<div class="references">
+<p class="subTitle">Referenced By</p>
+<ul>
+<li>
+<a href="#loginAudit">loginAudit</a> referencing (id)</li>
+<li>
+<a href="#permUsuario">permUsuario</a> referencing (id)</li>
+<li>
+<a href="#daoAudit">daoAudit</a> referencing (id)</li>
+<li>
+<a href="#entidadeAuditavel">entidadeAuditavel</a> referencing (id)</li>
+</ul>
+</div>
+</div>
+<div class="tableNameHeading">
+<h1>viagem<a name="viagem"></a>
+</h1>
+<h2>
+      (Physical Name: viagem)
+      </h2>
+<p class="comment">Registro dos dados referente a viagem que originou o desembarque.</p>
+</div>
+<div class="table">
+<table class="tableDefinition" width="100%">
+<tr>
+<td class="tdTableHeading tdLogicalColName">Logical Column Name</td><td class="tdTableHeading tdPhysicalColName">Physical Column Name</td><td class="tdTableHeading tdDataType">Type</td><td class="tdTableHeading tdPkFlag">PK</td><td class="tdTableHeading tdNullFlag">Nullable</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">id (PK)</td><td class="tdTableDefinition">id</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap>PK</td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Chave prim&aacute;ria.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">fk_embarcacao_id</td><td class="tdTableDefinition">fk_embarcacao_id</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Chave estrangeira para a tabela de embarca&ccedil;&otilde;es.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">quantidadeDePescadores</td><td class="tdTableDefinition">quantidadeDePescadores</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">N&uacute;mero de pescadores para a viagem espec&iacute;fica de um dada embarca&ccedil;&atilde;o.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">dataSaida</td><td class="tdTableDefinition">dataSaida</td><td class="tdTableDefinition">DATE</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Data da sa&iacute;da da embarca&ccedil;&atilde;o.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">horaSaida</td><td class="tdTableDefinition">horaSaida</td><td class="tdTableDefinition">TIME</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Hora da sa&iacute;da da embarca&ccedil;&atilde;o.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">dataChegada</td><td class="tdTableDefinition">dataChegada</td><td class="tdTableDefinition">DATE</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Data da chegada da embarca&ccedil;&atilde;o no porto.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">horaChegada</td><td class="tdTableDefinition">horaChegada</td><td class="tdTableDefinition">TIME</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Hora da chegada da embarca&ccedil;&atilde;o no porto.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">fk_areaPesca_id
+                &nbsp;(<a href="#areaPesca">FK</a>)
+              </td><td class="tdTableDefinition">fk_areaPesca_id</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Chave estrangeira para a tabela de &aacute;reas de pesca.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">fk_dadosEsforco_id
+                &nbsp;(<a href="#dadosEsforco">FK</a>)
+              </td><td class="tdTableDefinition">fk_dadosEsforco_id</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Chave estrangeira para a tabela de dados de esfor&ccedil;o da viagem.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">fk_conservacaoPescado_id
+                &nbsp;(<a href="#conservacaoPescado">FK</a>)
+              </td><td class="tdTableDefinition">fk_conservacaoPescado_id</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Chave estrangeira para a tabela conseva&ccedil;&atilde;o do pescado.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">pesoCapturaTotal</td><td class="tdTableDefinition">pesoCapturaTotal</td><td class="tdTableDefinition">FLOAT</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Pesot total em kg da captura na viagem.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">custoPescaria</td><td class="tdTableDefinition">custoPescaria</td><td class="tdTableDefinition">FLOAT</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap></td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Custo total da pescaria.</div>
+</td>
+</tr>
+<tr valign="top">
+<td class="tdTableDefinition">diasProximaPescaria</td><td class="tdTableDefinition">diasProximaPescaria</td><td class="tdTableDefinition">INTEGER</td><td class="tdTableDefinition" nowrap></td><td class="tdTableDefinition" nowrap>NOT NULL</td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="comment">Dias para a pr&oacute;xima pescaria.</div>
+</td>
+</tr>
+</table>
+<div class="references">
+<p class="subTitle">References</p>
+<ul>
+<li>
+<a href="#conservacaoPescado">conservacaoPescado</a> through (fk_conservacaoPescado_id)</li>
+<li>
+<a href="#areaPesca">areaPesca</a> through (fk_areaPesca_id)</li>
+<li>
+<a href="#dadosEsforco">dadosEsforco</a> through (fk_dadosEsforco_id)</li>
+</ul>
+<p class="subTitle">Referenced By</p>
+<ul>
+<li>
+<a href="#desembarque">desembarque</a> referencing (id)</li>
+<li>
+<a href="#captura">captura</a> referencing (id)</li>
+<li>
+<a href="#custosPescaria">custosPescaria</a> referencing (id)</li>
+</ul>
+</div>
+</div>
+</body>
+</html>

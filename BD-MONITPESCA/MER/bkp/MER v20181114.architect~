@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<architect-project version="1.0" appversion="1.0.8">
+ <project-name>MER v20181114</project-name>
+ <print-settings numCopies="1" zoom="1.0" pageNumbersPrinted="true" orientation="1" paperWidth="612.0" paperHeight="792.0" leftBorder="50.0" rightBorder="50.0" topBorder="50.0" bottomBorder="50.0" />
+ <project-data-sources>
+  <data-source id="DS0">
+   <property key="Logical" value="Modelo de Dados" />
+  </data-source>
+ </project-data-sources>
+ <source-databases>
+ </source-databases>
+ <target-database id="ppdb" dbcs-ref="DS0">
+  <table id="TAB1" populated="true" UUID="fdf9bf53-569a-43a7-8606-321c633b7a19" name="embarcacao" objectType="TABLE" physicalName="embarcacao" >
+   <remarks>Cadastro das embarcações</remarks>
+   <folder id="FOLTAB11" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL2" populated="true" UUID="c94fa969-5e35-4c25-8fa2-bc8fa0f2cc3f" autoIncrement="false" autoIncrementSequenceName="embarcacao_id_seq" defaultValue="" name="id" nullable="0" physicalName="id" precision="0" primaryKeySeq="0" referenceCount="5" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks>Chave primária</remarks>
+    </column>
+    <column id="COL3" populated="true" UUID="1f3048b9-4d72-45c4-b4ec-55ff0f2ce97c" autoIncrement="false" autoIncrementSequenceName="embarcacao_fk_comunidade_id_seq" defaultValue="" name="fk_comunidade_id" nullable="0" physicalName="fk_comunidade_id" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks>Chave estrangeira da tabea de comunidades</remarks>
+    </column>
+    <column id="COL4" populated="true" UUID="5c78324e-a94c-45ac-94c5-785d0fb4a1af" autoIncrement="false" autoIncrementSequenceName="embarcacao_dataRegistro_seq" defaultValue="" name="dataRegistro" nullable="0" physicalName="dataRegistro" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="91" userDefinedTypeUUID="ee349be3-6af2-46e1-b305-975f5354b009" >
+     <remarks>Data de registro da embarcação no sistema.</remarks>
+    </column>
+    <column id="COL5" populated="true" UUID="191d1667-a04d-49ca-8d65-d2f34f6877d7" autoIncrement="false" autoIncrementSequenceName="embarcacao_nomeEmbarcacao_seq" defaultValue="" name="nomeEmbarcacao" nullable="0" physicalName="nomeEmbarcacao" precision="30" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>Nome do barco</remarks>
+    </column>
+    <column id="COL6" populated="true" UUID="f28add63-34e9-405b-84f6-be4bb1b12510" autoIncrement="false" autoIncrementSequenceName="embarcacao_nomeProprietario_seq" defaultValue="" name="nomeProprietario" nullable="1" physicalName="nomeProprietario" precision="60" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>Nome do proprietário do barco</remarks>
+    </column>
+    <column id="COL7" populated="true" UUID="d2fa3518-6107-489a-a9b0-3c182d1c62ea" autoIncrement="false" autoIncrementSequenceName="embarcacao_fk_portoPrincipal_id_seq" defaultValue="" name="fk_portoPrincipal_id" nullable="0" physicalName="fk_portoPrincipal_id" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks>Chave estrangeira para a tabela de portos</remarks>
+    </column>
+    <column id="COL8" populated="true" UUID="f591b65b-12f7-4916-85d2-040d713e529a" autoIncrement="false" autoIncrementSequenceName="embarcacao_numTripulantes_seq" defaultValue="" name="numTripulantes" nullable="1" physicalName="numTripulantes" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks>Número de tripulantes da embarcação.</remarks>
+    </column>
+    <column id="COL9" populated="true" UUID="95e9b6c5-ca5d-4d59-82e7-0f3b6b2a06d5" autoIncrement="false" autoIncrementSequenceName="embarcacao_potenciaMotor_seq" defaultValue="" name="potenciaMotor" nullable="1" physicalName="potenciaMotor" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks>Potência do motor da embarcação em HP.</remarks>
+    </column>
+    <column id="COL10" populated="true" UUID="ecef9798-e88b-443f-b4ba-1bc63c69801e" autoIncrement="false" autoIncrementSequenceName="embarcacao_comprimentoCasco_seq" defaultValue="" name="comprimentoCasco" nullable="1" physicalName="comprimentoCasco" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks>Comprimento do casco da embarcação em metros.</remarks>
+    </column>
+    <column id="COL11" populated="true" UUID="da212c9c-8631-424a-b4a8-99ab840dbf9b" autoIncrement="false" autoIncrementSequenceName="embarcacao_fk_equiposEmbarcacao_id_seq" defaultValue="" name="fk_equiposEmbarcacao_id" nullable="0" physicalName="fk_equiposEmbarcacao_id" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks>Chave estrangeira para a tabela de equipamentos da embarcação equiposEmbarcacao.</remarks>
+    </column>
+    <column id="COL12" populated="true" UUID="10a05a88-94c1-4cf2-8519-fec09087a5b6" autoIncrement="false" autoIncrementSequenceName="embarcacao_fk_artefatosPesca_id_seq" defaultValue="" name="fk_artefatosPesca_id" nullable="0" physicalName="fk_artefatosPesca_id" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks>Chave estrangeira tabela de artefatos de pesca artefatosPesca.</remarks>
+    </column>
+    <column id="COL13" populated="true" UUID="8b5c7ecd-861b-44ed-ad7d-cbf40c95079f" autoIncrement="false" autoIncrementSequenceName="embarcacao_duracaoDiasMar_seq" defaultValue="" name="duracaoDiasMar" nullable="1" physicalName="duracaoDiasMar" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks>Tempo em dias que a embarcação pode ficar no mar sem precisar de reabastecimento (de combustível ou outros insumos).</remarks>
+    </column>
+    <column id="COL14" populated="true" UUID="46ac8eec-5b3a-488c-a288-fe83e2c4e3fc" autoIncrement="false" autoIncrementSequenceName="embarcacao_capacidadeCaga_seq" defaultValue="" name="capacidadeCaga" nullable="1" physicalName="capacidadeCaga" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks>Capacidade de carga da embarcação em toneladas.</remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB13" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB12" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB14" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX15" populated="true" UUID="8cf21c1f-c18a-4616-916b-07fd4fe9ae58" clustered="false" name="id" physicalName="id" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC16" populated="true" UUID="3da34fc0-9433-40df-adb5-bfaf9befa236" ascendingOrDescending="UNSPECIFIED" column-ref="COL2" name="id" physicalName="id" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB17" populated="true" UUID="0e4d0d2e-f7d0-4520-affe-2d06fc2441a7" name="diasAtivos" objectType="TABLE" physicalName="diasAtivos" >
+   <remarks>Registro dos dias ativos de cada embarcação em um período de 1 mês</remarks>
+   <folder id="FOLTAB171" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL18" populated="true" UUID="da5ea91a-2b45-4be3-9f30-ffe31053aae1" autoIncrement="false" autoIncrementSequenceName="diasAtivos_id_seq" defaultValue="" name="id" nullable="0" physicalName="id" precision="0" primaryKeySeq="0" referenceCount="3" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks>Chave primária</remarks>
+    </column>
+    <column id="COL19" populated="true" UUID="65a1e491-1063-4b7d-81e3-7346a1b2db5d" autoIncrement="false" autoIncrementSequenceName="diasAtivos_fk_embarcacao_id_seq" defaultValue="" name="fk_embarcacao_id" nullable="0" physicalName="fk_embarcacao_id" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks>Chave estrangeira tabela de embarcação.</remarks>
+    </column>
+    <column id="COL20" populated="true" UUID="ed6ddcd1-f057-4e3e-93c9-fd5ae6ebb1f5" autoIncrement="false" autoIncrementSequenceName="diasAtivos_localidade_seq" defaultValue="" name="localidade" nullable="1" physicalName="localidade" precision="30" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>Localidade</remarks>
+    </column>
+    <column id="COL21" populated="true" UUID="bfb2d121-e58e-4a69-baeb-e04eba328181" autoIncrement="false" autoIncrementSequenceName="diasAtivos_fk_comunidade_id_seq" defaultValue="" name="fk_comunidade_id" nullable="0" physicalName="fk_comunidade_id" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks>Chave estrangeira tabela de comunidades.</remarks>
+    </column>
+    <column id="COL22" populated="true" UUID="5b840aac-76db-4a81-a381-07dc55e52174" autoIncrement="false" autoIncrementSequenceName="diasAtivos_dataAtividade_seq" defaultValue="" name="dataAtividade" nullable="0" physicalName="dataAtividade" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="91" userDefinedTypeUUID="ee349be3-6af2-46e1-b305-975f5354b009" >
+     <remarks>Data em que o evento ocorreu.</remarks>
+    </column>
+    <column id="COL23" populated="true" UUID="bedd9c0a-a420-4172-a571-f20f3a94ee2f" autoIncrement="false" autoIncrementSequenceName="diasAtivos_statusAtividade_seq" defaultValue="" name="statusAtividade" nullable="0" physicalName="statusAtividade" precision="1" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>Esse valor deverá ser preenchido com 0(zero) se a embarcação não estiver pescando ou 1 se ela estiver.</remarks>
+    </column>
+    <column id="COL24" populated="true" UUID="094d6e39-1060-4410-b33d-59e342ad0d34" autoIncrement="false" autoIncrementSequenceName="diasAtivos_observacoes_seq" defaultValue="" name="observacoes" nullable="1" physicalName="observacoes" precision="255" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>Campo livre preenchimento com dados observacionais.</remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB173" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB172" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB174" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX25" populated="true" UUID="501d26b4-2cad-44cb-b661-8783ec5971e1" clustered="false" name="diasAtivos_pk" physicalName="diasAtivos_pk" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC26" populated="true" UUID="7f567065-e7ae-4bda-a2a2-2c20c94d7c45" ascendingOrDescending="UNSPECIFIED" column-ref="COL18" name="id" physicalName="id" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB27" populated="true" UUID="7237e9b5-6bcd-4f8e-9dfa-79a0feecaf26" name="comunidade" objectType="TABLE" physicalName="comunidade" >
+   <remarks>Cadastros das comunidades de atuação do programa</remarks>
+   <folder id="FOLTAB271" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL28" populated="true" UUID="a374f8d8-8d67-44ff-a8b7-38232960555d" autoIncrement="true" autoIncrementSequenceName="comunidade_id_seq" defaultValue="" name="id" nullable="0" physicalName="id" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks>Chave primária</remarks>
+    </column>
+    <column id="COL29" populated="true" UUID="b0f7433d-5bf1-431f-8bd8-d2af07c0ec8d" autoIncrement="false" autoIncrementSequenceName="comunidade_nomeComunidade_seq" defaultValue="" name="nomeComunidade" nullable="0" physicalName="nomeComunidade" precision="60" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>Nome da comunidade. Não necessariamente nme de municípios, sendo desvinculado do cadastro do IBGE.</remarks>
+    </column>
+    <column id="COL30" populated="true" UUID="39a0ae28-1ade-4a15-bd5e-1e6553a61202" autoIncrement="false" autoIncrementSequenceName="comunidade_municipio_seq" defaultValue="" name="municipio" nullable="0" physicalName="municipio" precision="60" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>Município ao qual pertence a comunidade. Seguir cadastro do IBGE.</remarks>
+    </column>
+    <column id="COL31" populated="true" UUID="3e40bedf-da84-4aa8-836c-d30d943c38b6" autoIncrement="false" autoIncrementSequenceName="comunidade_ufMunicipio_seq" defaultValue="" name="ufMunicipio" nullable="0" physicalName="ufMunicipio" precision="2" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>Unidade da Federação (estado) ao qual pertence o município onde a comunidade se estabeleceu.</remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB273" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB272" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB274" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX32" populated="true" UUID="b79cded6-aa54-4077-aba8-60bf7d91ff30" clustered="false" name="id" physicalName="id" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC33" populated="true" UUID="4d724a8a-6758-4fc9-80f3-d7df7a825663" ascendingOrDescending="UNSPECIFIED" column-ref="COL28" name="id" physicalName="id" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB34" populated="true" UUID="b5b2b078-8cae-4fb9-ba14-6d599be00816" name="porto" objectType="TABLE" physicalName="porto" >
+   <remarks>Cadastro dos portos onde o programa atua.</remarks>
+   <folder id="FOLTAB341" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL35" populated="true" UUID="cac20ef7-2f17-42d5-a1de-eec0e8e416f0" autoIncrement="false" autoIncrementSequenceName="porto_id_seq" defaultValue="" name="id" nullable="0" physicalName="id" precision="0" primaryKeySeq="0" referenceCount="2" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks>Chave primária.</remarks>
+    </column>
+    <column id="COL36" populated="true" UUID="f2cce0db-fb17-4ec4-b102-fc370ac09465" autoIncrement="false" autoIncrementSequenceName="porto_nomePorto_seq" defaultValue="" name="nomePorto" nullable="0" physicalName="nomePorto" precision="30" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>Nome do porto</remarks>
+    </column>
+    <column id="COL37" populated="true" UUID="6eeda455-08bb-4602-ba67-bab87333a4c9" autoIncrement="false" autoIncrementSequenceName="porto_fk_comunidade_id_seq" defaultValue="" name="fk_comunidade_id" nullable="0" physicalName="fk_comunidade_id" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks>Chave estrangeira tabela de comunidades.</remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB343" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB342" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB344" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX38" populated="true" UUID="493ff991-a7ff-43a3-a696-bd73bc5acc63" clustered="false" name="porto" physicalName="porto" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC39" populated="true" UUID="400714c9-7179-49f7-852a-6b253e47b430" ascendingOrDescending="UNSPECIFIED" column-ref="COL35" name="id" physicalName="id" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB40" populated="true" UUID="37b6b43d-0187-43ed-ad9d-3c297fbae102" name="equiposEmbarcacao" objectType="TABLE" physicalName="equiposEmbarcacao" >
+   <remarks>Tipos de equipamentos utilizados nas embarcações.</remarks>
+   <folder id="FOLTAB401" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL41" populated="true" UUID="7ebab67b-4ac5-4897-9b9e-fc2df32efbab" autoIncrement="true" autoIncrementSequenceName="equiposEmbarcacao_id_seq" defaultValue="" name="id" nullable="0" physicalName="id" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks>Chave primária</remarks>
+    </column>
+    <column id="COL42" populated="true" UUID="fdb03828-8e94-40e7-89c5-7f508b23ae9f" autoIncrement="false" autoIncrementSequenceName="equiposEmbarcacao_nomeEquipo_seq" defaultValue="" name="nomeEquipo" nullable="0" physicalName="nomeEquipo" precision="30" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>Nome do equipamento.</remarks>
+    </column>
+    <column id="COL43" populated="true" UUID="faeb5356-7556-4d5e-a93e-896ef0764a75" autoIncrement="false" autoIncrementSequenceName="equiposEmbarcacao_descricaoEquipo_seq" defaultValue="" name="descricaoEquipo" nullable="1" physicalName="descricaoEquipo" precision="60" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>Descrição do equipamento, se necessário.</remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB403" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB402" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB404" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX44" populated="true" UUID="1f3a592f-9f97-4f75-b7ac-1b37908b2a9f" clustered="false" name="id" physicalName="id" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC45" populated="true" UUID="36b38284-d3a7-4934-8a32-50debcc95948" ascendingOrDescending="UNSPECIFIED" column-ref="COL41" name="id" physicalName="id" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB46" populated="true" UUID="4231b49a-7d02-41db-b4d5-f6ddfacf7c40" name="artefatosPesca" objectType="TABLE" physicalName="artefatosPesca" >
+   <remarks>Cadastro dos artefatos utilizados para pescaria, tais como rede de emalhe, espinhel, etc.</remarks>
+   <folder id="FOLTAB461" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL47" populated="true" UUID="4843d574-14d2-41ef-aaf5-10af31f52ad3" autoIncrement="true" autoIncrementSequenceName="artefatosPesca_id_seq" defaultValue="" name="id" nullable="0" physicalName="id" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks>Chave primária</remarks>
+    </column>
+    <column id="COL48" populated="true" UUID="088dd415-0dd8-4eb2-8648-3cba3e3d5088" autoIncrement="false" autoIncrementSequenceName="artefatosPesca_nomeArtefato_seq" defaultValue="" name="nomeArtefato" nullable="0" physicalName="nomeArtefato" precision="45" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>Nome do artefato de pesca.</remarks>
+    </column>
+    <column id="COL49" populated="true" UUID="191a93c7-aa4d-4abd-a59e-a1fe74293708" autoIncrement="false" autoIncrementSequenceName="artefatosPesca_descricaoArtefato_seq" defaultValue="" name="descricaoArtefato" nullable="1" physicalName="descricaoArtefato" precision="255" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>Descrição opcional do artefato.</remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB463" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB462" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB464" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX50" populated="true" UUID="22a1ad9e-044a-4cd0-a5ad-9305c06039c7" clustered="false" name="id" physicalName="id" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC51" populated="true" UUID="6c6403f4-4499-400e-8b9f-c536f6468d8e" ascendingOrDescending="UNSPECIFIED" column-ref="COL47" name="id" physicalName="id" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB52" populated="true" UUID="1393bbdf-6497-4923-b2c7-921e480aaefa" name="monitorCampo" objectType="TABLE" physicalName="monitorCampo" >
+   <remarks>Dados de cadastro dos monitores de campo que realizam as amostragens.</remarks>
+   <folder id="FOLTAB521" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL53" populated="true" UUID="21a57e41-6aad-48a9-b366-a674e11e8d2f" autoIncrement="true" autoIncrementSequenceName="monitorCampo_id_seq" defaultValue="" name="id" nullable="0" physicalName="id" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks>Chave primária</remarks>
+    </column>
+    <column id="COL54" populated="true" UUID="ab36717e-7fbe-403c-9efd-b64edf4c5120" autoIncrement="false" autoIncrementSequenceName="monitorCampo_nomeMonitor_seq" defaultValue="" name="nomeMonitor" nullable="0" physicalName="nomeMonitor" precision="30" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>Primeiro nome do monitor.</remarks>
+    </column>
+    <column id="COL55" populated="true" UUID="7e697b40-824a-4482-acec-9bc58c0426dd" autoIncrement="false" autoIncrementSequenceName="monitorCampo_sobrenomeMonitor_seq" defaultValue="" name="sobrenomeMonitor" nullable="0" physicalName="sobrenomeMonitor" precision="60" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>Sobrenome completo do monitor.</remarks>
+    </column>
+    <column id="COL56" populated="true" UUID="0c52ffa2-a053-42a0-a5c5-5828190880e4" autoIncrement="false" autoIncrementSequenceName="monitorCampo_rgMonitor_seq" defaultValue="" name="rgMonitor" nullable="1" physicalName="rgMonitor" precision="9" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>Identidade do monitor.</remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB523" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB522" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB524" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX57" populated="true" UUID="8903ad8d-d973-40cb-b1ec-5b3cabd9c5f3" clustered="false" name="id" physicalName="id" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC58" populated="true" UUID="f71abf8f-6da1-4c98-ba0d-e19e244fe6e8" ascendingOrDescending="UNSPECIFIED" column-ref="COL53" name="id" physicalName="id" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB59" populated="true" UUID="c8649f66-3d93-4269-aadb-bb5c21b32853" name="monitorXcomunidade" objectType="TABLE" physicalName="monitorXcomunidade" >
+   <remarks>Relação entre o monitor e as comunidades onde ele atua.</remarks>
+   <folder id="FOLTAB591" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL60" populated="true" UUID="31d40852-4dd2-4e96-8157-30850c8ae13c" autoIncrement="false" autoIncrementSequenceName="monitorXcomunidade_id_seq" defaultValue="" name="id" nullable="0" physicalName="id" precision="0" primaryKeySeq="0" referenceCount="3" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks>Chave primária.</remarks>
+    </column>
+    <column id="COL61" populated="true" UUID="387a76b5-637f-4254-ae1c-0cc14cc1a052" autoIncrement="false" autoIncrementSequenceName="monitorXcomunidade_fk_monitor_id_seq" defaultValue="" name="fk_monitor_id" nullable="0" physicalName="fk_monitor_id" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks>Chave estrangeira para a atabela de monitores.</remarks>
+    </column>
+    <column id="COL62" populated="true" UUID="40d751c4-d633-42a4-8403-8a58e8de0186" autoIncrement="false" autoIncrementSequenceName="monitorXcomunidade_fk_comunidade_id_seq" defaultValue="" name="fk_comunidade_id" nullable="0" physicalName="fk_comunidade_id" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks>Chave estrangeira para a tabela de comunidades.</remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB593" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB592" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB594" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX63" populated="true" UUID="e6833cfc-3b3c-4540-b460-5ec7264c272d" clustered="false" name="monitorXcomunidade" physicalName="monitorXcomunidade" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC64" populated="true" UUID="5350e0bf-03bf-4a1c-b62d-8ba19f0ca08f" ascendingOrDescending="UNSPECIFIED" column-ref="COL60" name="id" physicalName="id" />
+    </index>
+   </folder>
+  </table>
+  <relationships>
+   <relationship id="REL65" populated="true" UUID="fb9ce854-72aa-4d7f-8dae-f422b9dac724" deferrability="7" deleteRule="3" fk-table-ref="TAB17" fkCardinality="6" identifying="false" name="embarcacao_diasAtivos_fk" physicalName="embarcacao_diasAtivos_fk" pk-table-ref="TAB1" pkCardinality="6" updateRule="3" >
+    <column-mapping id="CMP66" populated="true" UUID="2e6abb36-0895-4477-b534-a4a376703ad0" fk-column-ref="COL19" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL2" />
+   </relationship>
+   <relationship id="REL67" populated="true" UUID="16bb03aa-0ecd-4fe8-bcee-bd8b32aa0397" deferrability="7" deleteRule="3" fk-table-ref="TAB1" fkCardinality="7" identifying="false" name="comunidade_embarcacao_fk" physicalName="comunidade_embarcacao_fk" pk-table-ref="TAB27" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP68" populated="true" UUID="68987459-0e0a-48ab-b61f-560c79e89e9f" fk-column-ref="COL3" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL28" />
+   </relationship>
+   <relationship id="REL69" populated="true" UUID="360b4739-d155-4fe3-ae98-cf2fdff9899f" deferrability="7" deleteRule="3" fk-table-ref="TAB34" fkCardinality="7" identifying="false" name="comunidade_porto_fk" physicalName="comunidade_porto_fk" pk-table-ref="TAB27" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP70" populated="true" UUID="8f7e91ba-bd90-4f08-bf4d-4d1414d16d6f" fk-column-ref="COL37" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL28" />
+   </relationship>
+   <relationship id="REL71" populated="true" UUID="08ca1b89-cdd1-466b-aaf6-fabb681b7c2d" deferrability="7" deleteRule="3" fk-table-ref="TAB17" fkCardinality="7" identifying="false" name="comunidade_diasAtivos_fk" physicalName="comunidade_diasAtivos_fk" pk-table-ref="TAB27" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP72" populated="true" UUID="af174877-d3fc-4ef5-b813-03d3df1e3123" fk-column-ref="COL21" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL28" />
+   </relationship>
+   <relationship id="REL73" populated="true" UUID="8fa02418-99e3-42a9-aeb1-8e4b297d30ad" deferrability="7" deleteRule="3" fk-table-ref="TAB59" fkCardinality="6" identifying="false" name="comunidade_monitorXcomunidade_fk" physicalName="comunidade_monitorXcomunidade_fk" pk-table-ref="TAB27" pkCardinality="6" updateRule="3" >
+    <column-mapping id="CMP74" populated="true" UUID="a1ab96a3-83c2-43ff-a948-7d792046c6fd" fk-column-ref="COL62" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL28" />
+   </relationship>
+   <relationship id="REL75" populated="true" UUID="b9ad82f8-5e70-4989-8d66-c7e9210f62d6" deferrability="7" deleteRule="3" fk-table-ref="TAB1" fkCardinality="7" identifying="false" name="porto_embarcacao_fk" physicalName="porto_embarcacao_fk" pk-table-ref="TAB34" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP76" populated="true" UUID="fec5a990-b5c4-459a-a28b-b7e3524ca1c5" fk-column-ref="COL7" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL35" />
+   </relationship>
+   <relationship id="REL77" populated="true" UUID="c2f95fc4-a969-45c8-b8cd-aee0540eace0" deferrability="7" deleteRule="3" fk-table-ref="TAB1" fkCardinality="7" identifying="false" name="equiposEmbarcacao_embarcacao_fk" physicalName="equiposEmbarcacao_embarcacao_fk" pk-table-ref="TAB40" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP78" populated="true" UUID="ea5f026a-3812-4270-8307-fc889db00140" fk-column-ref="COL11" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL41" />
+   </relationship>
+   <relationship id="REL79" populated="true" UUID="a9ae1a8d-9b85-48fa-b78c-cc9b4ebfd1d4" deferrability="7" deleteRule="3" fk-table-ref="TAB1" fkCardinality="7" identifying="false" name="artefatosPesca_embarcacao_fk" physicalName="artefatosPesca_embarcacao_fk" pk-table-ref="TAB46" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP80" populated="true" UUID="37d5196c-562d-42af-8afc-315867123f9e" fk-column-ref="COL12" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL47" />
+   </relationship>
+   <relationship id="REL81" populated="true" UUID="737e7a56-5c9d-4095-b64d-6409cac1676f" deferrability="7" deleteRule="3" fk-table-ref="TAB59" fkCardinality="6" identifying="false" name="monitorCampo_monitorXcomunidade_fk" physicalName="monitorCampo_monitorXcomunidade_fk" pk-table-ref="TAB52" pkCardinality="6" updateRule="3" >
+    <column-mapping id="CMP82" populated="true" UUID="62103ee1-75c3-4916-a605-41e0e33ed577" fk-column-ref="COL61" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL53" />
+   </relationship>
+  </relationships>
+ </target-database>
+ <ddl-generator type="ca.sqlpower.architect.ddl.GenericDDLGenerator" allow-connection="true"> </ddl-generator>
+ <liquibase-settings useSeparateChangeSets="false" generateId="false" idStart="1"/>
+ <create-kettle-job-settings filePath="" jobName="" schemaName="" kettleJoinType="0" savingToFile="true" />
+ <play-pen zoom="0.8408964152537145" viewportX="0" viewportY="0" relationship-style="rectilinear" names-displayLogicalNames="true" showPrimaryTag="true" showForeignTag="true" showAlternateTag="true" columnVisibility="ALL" relationshipLabelVisibility="true">
+  <table-pane table-ref="TAB1" x="406" y="76" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB17" x="846" y="30" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB27" x="25" y="26" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB34" x="24" y="193" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB40" x="24" y="323" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB46" x="27" y="455" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB52" x="953" y="249" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB59" x="1006" y="425" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-link relationship-ref="REL67" pkConnection="0.9294117647058824" fkConnection="0.24170616113744076" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="33"/>
+  <table-link relationship-ref="REL69" pkConnection="0.3125" fkConnection="0.32751091703056767" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="132"/>
+  <table-link relationship-ref="REL75" pkConnection="0.4225352112676056" fkConnection="0.8009478672985783" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="33"/>
+  <table-link relationship-ref="REL77" pkConnection="0.5211267605633803" fkConnection="0.08560311284046693" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="65"/>
+  <table-link relationship-ref="REL79" pkConnection="0.5211267605633803" fkConnection="0.1701388888888889" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="65"/>
+  <table-link relationship-ref="REL71" pkConnection="0.27058823529411763" fkConnection="0.18181818181818182" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="33"/>
+  <table-link relationship-ref="REL65" pkConnection="0.23696682464454977" fkConnection="0.6902654867256637" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="33"/>
+  <table-link relationship-ref="REL81" pkConnection="0.4896265560165975" fkConnection="0.5" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="132"/>
+  <table-link relationship-ref="REL73" pkConnection="0.0" fkConnection="0.916" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="129"/>
+ </play-pen>
+ <critic-manager>
+  <critic-grouping platformType="Generic" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.PrimaryKeyCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.RelationshipMappingTypeCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.EmptyRelationshipCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.AlphaNumericNameCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.AlphaNumericSequenceNameCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.SetDefaultOnColumnWithNoDefaultCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.SetNullOnNonNullableColumnCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.DuplicateNameCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="DB2" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.DB2UnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="H2" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.H2UnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="HSQLDB" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.HSQLDBUnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="MySQL" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.MySQLCommentCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.MySQLReservedWordsCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.MySQLUnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="Oracle" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.OraclePhysicalNameCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.OracleReservedWordsCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.OracleUnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="PostgreSQL" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.PostgreSQLReservedWordsCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="SQL Server" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.SQLServerUnsupportedFeaturesCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.SQLServerReservedWordsCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="SQL Server 2000" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.SQLServer2000UnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="SQL Server 2005" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.SQLServer2005UnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+ </critic-manager>
+ <profiles topNCount="10">
+  </profiles>
+  <olap>
+  </olap>
+  <olap-gui>
+  </olap-gui>
+</architect-project>
