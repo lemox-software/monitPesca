@@ -1,0 +1,53 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:f="http://xmlns.jcp.org/jsf/core"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui"
+                template="/WEB-INF/templates/Layout.xhtml">
+
+
+    <ui:define name="content">
+        <h1 class="aw-page-title">Dados de cadastro dos monitores de campo que realizam as amostragens</h1>
+        <h:form id="frm">
+
+            <p:panel  >
+                <h:form id="frmCadastro">
+
+                    <p:messages id="msg" />
+
+                    <div class="ui-fluid">
+
+                        <p:panelGrid columns="2" layout="grid"
+                                     columnClasses="ui-grid-col-4, ui-grid-col-8"
+                                     styleClass="panelgrid-noborder">
+
+                            <p:outputLabel value="Nome do monitor" for="nome"/>
+                            <p:inputText id="nome" value="#{monitorCampoBean.bean.nomeMonitor}" 
+                                         required="true" requiredMessage="campo nome do monitor obrigatorio"/> 
+
+                            <p:outputLabel value="Sobrenome do monitor" for="sobrenome"/>
+                            <p:inputText id="sobrenome" value="#{monitorCampoBean.bean.sobrenomeMonitor}"
+                                         required="true" requiredMessage="campo sobrenome do monitor obrigatorio"/> 
+
+                            <p:outputLabel value="RG" for="rg"/>
+                            <p:inputText id="rg" value="#{monitorCampoBean.bean.rgMonitor}" /> 
+
+                        </p:panelGrid>
+
+                    </div>
+
+                    <p:toolbar>
+                        <p:toolbarGroup>
+                            <p:commandButton value="Salvar" action="#{monitorCampoBean.salvar}" 
+                                             update="msg"/>
+
+                        </p:toolbarGroup>
+                    </p:toolbar>
+
+                </h:form>
+            </p:panel>
+        </h:form>
+    </ui:define>
+
+
+</ui:composition>
